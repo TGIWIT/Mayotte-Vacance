@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayotte Vacance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/img/AGENCE DE VOYAGE_prev_ui.png">
+</head>
+<body>
+    <nav class="navbar">
+        <img class="logo" src="./assets/img/AGENCE DE VOYAGE_prev_ui.png" alt="logo agence de voyage">
+        <div class="nav-links">
+            <ul>
+                <li class="active"><a href="#">Acceuil</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">A propos de nous</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <img class="menu-hamburger" src="./assets/img/menu-btn.png" alt="menu hamburger">
+    </nav> 
+    <div class="titre">
+        <h1>Espace client</h1>
+    </div>
+    <div class="bouton">
+        <a href="#" class="btn">Parcourir</a>
+        <a href="#" class="btn">Reservez</a>
+    </div>
+    <header></header>
+</body>
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+    const navLinks = document.querySelector(".nav-links")
+    const Titre = document.querySelector(".titre")
+    const Bouton = document.querySelector(".bouton")
+ 
+    menuHamburger.addEventListener('click',()=> {
+        navLinks.classList.toggle('mobile-menu')
+    if (navLinks.classList.contains('mobile-menu')) {
+        Titre.style.display = "none";
+        Bouton.style.display = "none";
+    } 
+    else {
+        Titre.style.display = "block";
+        Bouton.style.display = "block";
+    }
+    })
+</script>
+</html>

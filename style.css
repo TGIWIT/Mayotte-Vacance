@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: url(./assets/fonts/Poppins-Black.ttf);
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./assets/img/image\ ocean.jpg);
+    background-size: cover;
+}
+
+.navbar {
+    position: absolute;
+    height: 20px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar .logo {
+    top: 50px;
+    left: 50px;
+    width: 100px;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li a {
+    background-color: transparent;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    border-radius: 50px;
+    color: white;
+    padding: 10px 20px;
+    transition: 0.4s;
+}
+
+.navbar .nav-links ul li a:hover {
+    background-color:rgba(253, 245, 245, 0.418);
+    color: black;
+}
+    
+.navbar .nav-links ul li.active a {
+    color: red;
+    font-weight: 600;
+}
+
+.titre{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.titre h1{
+    color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.bouton{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.bouton a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding: 10px 30px;
+    transition: 0.4s;
+}
+
+.bouton a:hover {
+    background-color:rgba(253, 245, 245, 0.418);
+    color: black;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 35px;
+}
+
+@media screen and (max-width: 900px) {
+
+    .mobile-menu .titre,
+    .mobile-menu .bouton {
+        display: none;
+    }
+    
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 45px;
+        left: 30px;
+    }
+
+    .navbar .menu-hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(0, 104, 240, 0.089);
+        backdrop-filter: blur(4px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: 0.5s;
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+    
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+
+    .mobile-menu.titre.bouton {
+    display: none;
+    }
+}
